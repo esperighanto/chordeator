@@ -1,0 +1,116 @@
+<head>
+	<script src="teoria.js"></script> <!-- Import teoria.js, the library managing the music theory computation for me. -->
+	<script type="text/javascript" src="generator.js"></script> <!-- Import my chord generator script. -->
+
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> <!-- Import the Google Icon Font. -->
+	<link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/> <!-- Import materialize.css. -->
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/> <!-- Let the browser know that this website is optimized for mobile. -->
+</head>
+<body>
+	<center><h3>Chordeator</h3></center>
+	<br>
+	<center>Generate chord progressions in 3 different levels of difficulty, with optionally repeating chords.</center>
+	<br><br>
+
+	<h5><center><b>Chord Difficulty</b><br></center></h5>
+
+	<div class="row" align="center">
+		<form action="#">
+			<!-- <p> -->
+			<div class="col s4">
+				<label>
+					<input name="progtype" type="radio" id="basic" checked/>
+					<span> Basic </span>
+				</label>
+			</div>
+			<!-- </p> -->
+
+			<!-- <p> -->
+			<div class="col s4">
+				<label>
+					<input name="progtype" type="radio" id="intermediate"/>
+					<span> Intermediate </span>
+				</label>
+			</div>
+			<!-- </p> -->
+
+			<!-- <p> -->
+			<div class="col s4">
+				<label>
+					<input name="progtype" type="radio" id="advanced"/>
+					<span> Advanced </span>
+				</label>
+			</div>
+			<!-- </p> -->
+		</form>
+	</div>
+
+	<!-- <input type="radio" id="basic" name="progtype" value="basic" checked>
+	<label for="basic">Basic</label><br>
+	<input type="radio" id="intermediate" name="progtype" value="intermediate">
+	<label for="intermediate">Intermediate</label><br>
+	<input type="radio" id="advanced" name="progtype" value="advanced">
+	<label for="advanced">Advanced</label><br> -->
+
+	<br>
+	<h5><center><b>Can chords repeat?</b><br></center></h5>
+	<div class="row" align="center">
+		<form action="#">
+			<!-- <p> -->
+			<div class="col s6">
+				<label>
+					<input id="repeats" name="repeats" type="radio" value="norepeats" checked/>
+					<span> Doesn't repeat </span>
+				</label>
+			</div>
+			<!-- </p> -->
+			<!-- <p> -->
+			<div class="col s6">
+				<label>
+					<input id="repeats" name="repeats" type="radio" value="repeats"/>
+					<span> Repeats </span>
+				</label>
+			</div>
+			<!-- </p> -->
+		</form>
+	</div>
+
+	<!-- <input type="radio" id="norepeats" name="repeats" value="norepeats" checked>
+	<label for="norepeats">Doesn't repeat</label><br>
+	<input type="radio" id="repeats" name="repeats" value="repeats">
+	<label for="repeats">Repeats</label><br> -->
+
+	<br>
+
+	<h5><center><b>Chords:</b></center></h5>
+	<div class="row" align="center">
+		<div class="col s3">
+			<div id="firstchord">First chord: Not generated yet.</div>
+		</div>
+		<div class="col s3">
+			<div id="secondchord">Second chord: Not generated yet.</div>
+		</div>
+		<div class="col s3">
+			<div id="thirdchord">Third chord: Not generated yet.</div>
+		</div>
+		<div class="col s3">
+			<div id="fourthchord">Fourth chord: Not generated yet.</div>
+		</div>
+	</div>
+		<!-- <div id="firstchord">First chord: Not generated yet.</div>
+		<div id="secondchord">Second chord: Not generated yet.</div>
+		<div id="thirdchord">Third chord: Not generated yet.</div>
+		<div id="fourthchord">Fourth chord: Not generated yet.</div> -->
+
+	<br>
+	<div align="center">
+		<button class="btn waves-effect waves-light" type="submit" name="action" onclick="generateChordProg()">
+			Generate chords
+			<i class="material-icons right">send</i>
+		</button>
+	</div>
+	<!-- <input type="button" value="Generate Chord Progression" onclick="generateChordProg()"> -->
+
+	<script type="text/javascript" src="js/materialize.min.js"></script> <!-- Import materialize.js at the end of the body for optimized loading.-->
+</body>

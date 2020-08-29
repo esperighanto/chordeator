@@ -1,0 +1,25 @@
+{
+  "name": "@tonaljs/array",
+  "version": "3.2.5",
+  "description": "Functions to work with arrays of tonal objects",
+  "keywords": [
+    "array",
+    "music",
+    "theory",
+    "@tonaljs/core"
+  ],
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.dt.ts",
+  "dependencies": {
+    "@tonaljs/core": "^3.5.0"
+  },
+  "author": "danigb@gmail.com",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
+}
